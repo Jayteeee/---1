@@ -10,6 +10,17 @@ const Detail = (props) => {
   const [circle, circle_change] = React.useState([0, 1, 2, 3, 4]);
   const [rate, setRate] = React.useState();
 
+  React.useEffect(() => {
+    const press = (e) => {
+      if ([1, 2, 3, 4, 5].indexOf(parseInt(e.key)) !== -1) {
+        setRate(parseInt(e.key));
+      }
+    };
+    window.addEventListener("keydown", press);
+
+    return () => window.removeEventListener("keydown", press);
+  }, []);
+
   return (
     <Whole>
       <h1>
