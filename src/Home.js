@@ -88,7 +88,7 @@ const Home = (props) => {
 };
 
 const Title = styled.h1`
-  color: slateblue;
+  color: rgb(159, 226, 191);
   text-align: center;
   font-size: 30px;
   font-weight: bold;

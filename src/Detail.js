@@ -77,9 +77,9 @@ const Whole = styled.div`
 `;
 
 const Day = styled.span`
-  border: 1px solid orange;
+  border: 1px solid rgb(218, 247, 166);
   border-radius: 10px;
-  background: orange;
+  background: rgb(218, 247, 166);
   font-size: 30px;
   color: white;
 `;
