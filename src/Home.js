@@ -42,7 +42,7 @@ const Home = (props) => {
         src="https://giphy.com/embed/1MTLxzwvOnvmE"
         width="315"
         height="170"
-        class="giphy-embed"
+        className="giphy-embed"
       ></iframe>
       <Line />
       {week_rates.map((w, idx) => {

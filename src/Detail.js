@@ -7,13 +7,12 @@ import "bulma/css/bulma.min.css";
 const Detail = (props) => {
   const params = useParams();
   const history = useHistory();
-  const [circle, circle_change] = React.useState([0, 1, 2, 3, 4]);
   const [rate, setRate] = React.useState();
 
   React.useEffect(() => {
     const press = (e) => {
       if ([1, 2, 3, 4, 5].indexOf(parseInt(e.key)) !== -1) {
-        setRate(parseInt(e.key));
+        setRate(parseInt(e.key-1));
       }
     };
     window.addEventListener("keydown", press);
@@ -32,12 +31,13 @@ const Detail = (props) => {
         src="https://giphy.com/embed/OsOP6zRwxrnji"
         width="300"
         height="380"
-        class="giphy-embed"
+        className="giphy-embed"
       ></iframe>
       <Loop>
-        {circle.map((v, i) => {
+        {Array.from({ length: 5 }, (v, i) => {
           return (
             <Star
+              key = {i}
               onClick={() => {
                 setRate(i);
               }}
